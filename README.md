@@ -1,4 +1,4 @@
-# Turbulent Flow Emulation Repository
+p# Turbulent Flow Emulation Repository
 ## Overview
 This repository provides data and code for the study of turbulent flow emulation using Proper Orthogonal Decomposition (POD) and a novel Variational Autoencoder (xVAE). The focus is on capturing complex flow dynamics, including extreme turbulence events, with applications to Large-Eddy Simulation (LES) of a buoyant plume generated during the Mosquito Wildland Fire in California, September 2022.
 
