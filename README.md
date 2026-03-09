@@ -22,38 +22,41 @@ The repository is organized so that each variable has its own data and analysis 
 
 plume_analysis/
 ├── R/
-│   ├── Fluid density/
-│   │   ├── vanilla VAE/
-│   │   │   ├── (CV) centerline_analysis_fire_w_vanilla_VAE.R
-│   │   │   ├── CV_vanillaVAE_tailRMSE.R
-│   │   │   ├── centerline_analysis_fire_w_vanilla_VAE.R
-│   │   │   ├── emp_chi_on_grid_vanilla_VAE.R
-│   │   │   └── generateEmulationCompPlots_vanilla_VAE.R
-│   │   ├── (CV) centerline_analysis_fire_w_NMF.R
-│   │   ├── CV_XVAE_tailRMSE.R
-│   │   ├── NMF_new.py
-│   │   ├── POD_centerline_analysis_fire.R
-│   │   ├── centerline_analysis_fire_w_NMF.R
-│   │   ├── emp_chi_on_grid.R
-│   │   ├── generateEmulationCompPlots.R
-│   │   ├── generateQQplot.R
-│   │   ├── structure_function.R
-│   │   └── utils.R
-│   └── Vertical velocity/
-│       ├── (CV) centerline_analysis_fire_w_NMF.R
-│       ├── CV_XVAE_tailRMSE.R
-│       ├── NMF_new.py
-│       ├── POD_centerline_analysis_fire.R
-│       ├── centerline_analysis_fire_w_NMF.R
-│       ├── csv_for_python_NMF.R
-│       ├── emp_chi_on_grid.R
-│       ├── generateEmulationCompPlots.R
-│       ├── generateQQplot.R
-│       ├── structure_function.R
-│       └── utils.R
+│ ├── Fluid density/
+│ │ ├── vanilla VAE/
+│ │ │ ├── (CV) centerline_analysis_fire_w_vanilla_VAE.R
+│ │ │ ├── CV_vanillaVAE_tailRMSE.R
+│ │ │ ├── centerline_analysis_fire_w_vanilla_VAE.R
+│ │ │ ├── emp_chi_on_grid_vanilla_VAE.R
+│ │ │ └── generateEmulationCompPlots_vanilla_VAE.R
+│ │ ├── (CV) centerline_analysis_fire_w_NMF.R
+│ │ ├── CV_XVAE_tailRMSE.R
+│ │ ├── NMF_new.py
+│ │ ├── POD_centerline_analysis_fire.R
+│ │ ├── centerline_analysis_fire_w_NMF.R
+│ │ ├── emp_chi_on_grid.R
+│ │ ├── generateEmulationCompPlots.R
+│ │ ├── generateQQplot.R
+│ │ ├── structure_function.R
+│ │ └── utils.R
+│ │
+│ └── Vertical velocity/
+│ ├── (CV) centerline_analysis_fire_w_NMF.R
+│ ├── CV_XVAE_tailRMSE.R
+│ ├── NMF_new.py
+│ ├── POD_centerline_analysis_fire.R
+│ ├── centerline_analysis_fire_w_NMF.R
+│ ├── csv_for_python_NMF.R
+│ ├── emp_chi_on_grid.R
+│ ├── generateEmulationCompPlots.R
+│ ├── generateQQplot.R
+│ ├── structure_function.R
+│ └── utils.R
+│
 ├── data/
-│   ├── Fluid density/
-│   └── Vertical velocity/
+│ ├── Fluid density/
+│ └── Vertical velocity/
+│
 ├── www/
 ├── LICENSE
 └── README.md
