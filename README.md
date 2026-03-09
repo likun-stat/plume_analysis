@@ -1,4 +1,3 @@
-p# Turbulent Flow Emulation Repository
 # Turbulent Flow Emulation Repository
 
 ## Overview
@@ -30,7 +29,7 @@ plume_analysis/
 │ │ │ ├── emp_chi_on_grid_vanilla_VAE.R
 │ │ │ └── generateEmulationCompPlots_vanilla_VAE.R
 │ │ ├── (CV) centerline_analysis_fire_w_NMF.R
-│ │ ├── CV_XVAE_tailRMSE.R
+│ │ ├── CV_xVAE_tailRMSE.R
 │ │ ├── NMF_new.py
 │ │ ├── POD_centerline_analysis_fire.R
 │ │ ├── centerline_analysis_fire_w_NMF.R
@@ -42,7 +41,7 @@ plume_analysis/
 │ │
 │ └── Vertical velocity/
 │ ├── (CV) centerline_analysis_fire_w_NMF.R
-│ ├── CV_XVAE_tailRMSE.R
+│ ├── CV_xVAE_tailRMSE.R
 │ ├── NMF_new.py
 │ ├── POD_centerline_analysis_fire.R
 │ ├── centerline_analysis_fire_w_NMF.R
@@ -83,13 +82,14 @@ Planar Data Extraction: Data are extracted from the $x-z$ plane at $y=99$ grid p
 - Extracts dominant energetic structures from the turbulent flow fields using the eigenfunctions of the two-point correlation tensor.
 - Designed to efficiently emulate flow fields but without extreme-event modeling.
 
-2. *XVAE Framework*
+2. *xVAE Framework*
 
 - Incorporates max-infinitely divisible processes into the VAE structure to account for extremes and dependent structures in turbulent flow.
 - Allows for uncertainty quantification and generation of new data realizations.
 - Extended to handle 3D-indexed data for modeling the evolution of turbulent plumes in all spatial directions.
+- Use `(CV) centerline_analysis_fire_w_NMF.R` for cross validation and `centerline_analysis_fire_w_NMF.R` for xVAE training.
 
 3. *LES Simulation Integration*
 
 Interfaces with the WRF-ARW LES outputs to analyze and visualize flow fields.
-Preprocessing scripts to transform LES outputs into input data for the POD and XVAE models.
+Preprocessing scripts to transform LES outputs into input data for the POD and xVAE models.
