@@ -19,7 +19,7 @@ The repository is organized so that each variable has its own data and analysis 
 ---
 
 ## Repository structure
-
+```
 plume_analysis/
 ├── R/
 │ ├── Fluid density/
@@ -60,8 +60,7 @@ plume_analysis/
 ├── www/
 ├── LICENSE
 └── README.md
-
-
+```
 ## Data
 ### Description
 The dataset includes high-resolution LES outputs simulating a turbulent buoyant plume under realistic atmospheric conditions. The simulation is performed using a modified version of the Advanced Research Weather Research and Forecast Model (WRF-ARW v4.1) coupled with an LES scheme.
