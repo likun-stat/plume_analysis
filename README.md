@@ -1,8 +1,63 @@
 p# Turbulent Flow Emulation Repository
-## Overview
-This repository provides data and code for the study of turbulent flow emulation using Proper Orthogonal Decomposition (POD) and a novel Variational Autoencoder (xVAE). The focus is on capturing complex flow dynamics, including extreme turbulence events, with applications to Large-Eddy Simulation (LES) of a buoyant plume generated during the Mosquito Wildland Fire in California, September 2022.
+# Turbulent Flow Emulation Repository
 
-The XVAE framework is designed to enhance traditional Variational Autoencoders by incorporating max-infinitely divisible (max-id) processes, enabling robust modeling of extremal dependence and efficient uncertainty quantification (UQ). This approach is contrasted with POD, which, while efficient, lacks the ability to capture intermittency and extreme events.
+## Overview
+
+This repository contains data and code for statistical emulation of turbulent large-eddy simulation (LES) plume fields using three approaches:
+
+- **POD** (Proper Orthogonal Decomposition),
+- **vanilla \(\beta\)-VAE** (a baseline variational autoencoder), and
+- **xVAE** (an extreme-value variational autoencoder that incorporates max-infinitely divisible structure).
+
+The goal is to emulate high-dimensional turbulent flow fields while preserving important tail behavior, spatial dependence, and uncertainty structure. The repository now includes analyses for **two LES variables**:
+
+1. **Fluid density**, which exhibits stronger temporal evolution, intermittency, and plume spreading.
+2. **Vertical velocity**, which exhibits a more persistent updraft structure after the plume reaches a quasi-stationary regime.
+
+The repository is organized so that each variable has its own data and analysis scripts. For the fluid-density study, we compare **POD**, **xVAE**, and **vanilla \(\beta\)-VAE**. For the vertical-velocity study, we compare **POD** and **xVAE**.
+
+---
+
+## Repository structure
+
+plume_analysis/
+├── R/
+│   ├── Fluid density/
+│   │   ├── vanilla VAE/
+│   │   │   ├── (CV) centerline_analysis_fire_w_vanilla_VAE.R
+│   │   │   ├── CV_vanillaVAE_tailRMSE.R
+│   │   │   ├── centerline_analysis_fire_w_vanilla_VAE.R
+│   │   │   ├── emp_chi_on_grid_vanilla_VAE.R
+│   │   │   └── generateEmulationCompPlots_vanilla_VAE.R
+│   │   ├── (CV) centerline_analysis_fire_w_NMF.R
+│   │   ├── CV_XVAE_tailRMSE.R
+│   │   ├── NMF_new.py
+│   │   ├── POD_centerline_analysis_fire.R
+│   │   ├── centerline_analysis_fire_w_NMF.R
+│   │   ├── emp_chi_on_grid.R
+│   │   ├── generateEmulationCompPlots.R
+│   │   ├── generateQQplot.R
+│   │   ├── structure_function.R
+│   │   └── utils.R
+│   └── Vertical velocity/
+│       ├── (CV) centerline_analysis_fire_w_NMF.R
+│       ├── CV_XVAE_tailRMSE.R
+│       ├── NMF_new.py
+│       ├── POD_centerline_analysis_fire.R
+│       ├── centerline_analysis_fire_w_NMF.R
+│       ├── csv_for_python_NMF.R
+│       ├── emp_chi_on_grid.R
+│       ├── generateEmulationCompPlots.R
+│       ├── generateQQplot.R
+│       ├── structure_function.R
+│       └── utils.R
+├── data/
+│   ├── Fluid density/
+│   └── Vertical velocity/
+├── www/
+├── LICENSE
+└── README.md
+
 
 ## Data
 ### Description
